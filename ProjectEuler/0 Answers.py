@@ -1,10 +1,4 @@
-Project Euler numerical answers
-Computed by Project Nayuki
-
-https://www.nayuki.io/page/project-euler-solutions
-https://github.com/nayuki/Project-Euler-solutions
-
-
+'''
 Problem 001: 233168
 Problem 002: 4613732
 Problem 003: 6857
@@ -208,4 +202,4 @@ Problem 493: 6.818741802
 Problem 500: 35407281
 Problem 518: 100315739184392
 Problem 549: 476001479068717
-Problem 587: 2240
+Problem 587: 2240 '''
