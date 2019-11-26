@@ -1,3 +1,1 @@
-class HowTheFuck(object):
-    pass
-#dude
+print((lambda x, y: x + y)(x=int(input('first numb')), y=int(input('second numb'))))
