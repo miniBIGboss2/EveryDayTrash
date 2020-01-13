@@ -11,4 +11,3 @@ def create_generator(n):
 
 
 print(sum(list(filter(lambda x: x % 2 == 0 and x < 4000000, create_generator(100)))))
-
