@@ -21,7 +21,6 @@ my_list = (itertools.islice('731671765313306249192251196744265747423553491949349
 
 def my_func():
     max_numb = 0
-    temp_numb = 0
     for i in my_list:
         temp_list.append(int(i))
     while len(temp_list) >= 13:
