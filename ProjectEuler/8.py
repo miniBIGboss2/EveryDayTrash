@@ -12,6 +12,7 @@
 Find the thirteen adjacent digits in the 1000-digit number that have the greatest product.
 What is the value of this product?"""
 
+import time
 import itertools
 
 temp_list = []
@@ -31,5 +32,6 @@ def my_func():
     print(max_numb)
 
 
+start_time = time.time()
 my_func()
-
+print(time.time() - start_time)
