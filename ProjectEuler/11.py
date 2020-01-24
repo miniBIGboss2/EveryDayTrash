@@ -47,11 +47,26 @@ grid = [[8, 2, 22, 97, 38, 15, 00, 40, 00, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 
         [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
         [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]]
 
+max_numb = 0
 
-def my_func():
+
+def horizontal():
+    temp_numb = 0
+    for row in grid:
+        for numb in row:
+            pass
+
+
+def vertical():
+    pass
+
+
+def diagonal():
     pass
 
 
 start_time = time.time()
-my_func()
+horizontal()
+vertical()
+diagonal()
 print(time.time() - start_time)
