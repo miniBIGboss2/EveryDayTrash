@@ -47,43 +47,22 @@ grid = [[8, 2, 22, 97, 38, 15, 00, 40, 00, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 
         [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
         [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]]
 
-max_numb = 1
 
-
-def horizontal():
-    global max_numb
+def numbers():
     temp_numb = 0
-    numb_check = 0
-    row_check = 0
-    while True:
-        for row in grid:
-            for numb in row:
-                temp_numb *= numb
-                numb_check += 1
-                row_check += 1
-                if numb_check == 4:
-                    if temp_numb > max_numb:
-                        print(temp_numb)
-                        max_numb = temp_numb
-                        numb_check = 0
-                    else:
-                        numb_check = 0
-                if row_check == 17:
-                    row_check = 0
+    y = 0
+    for x in range(20):
+        if x > temp_numb:
+            temp_numb = grid[y][x]
+        print(grid[y][x], end=' ')
+    print()
+    print(temp_numb)
 
 
-
-
-def vertical():
-    pass
-
-
-def diagonal():
-    pass
+def print_grid(y, x):
+    print(grid[y][x])
 
 
 start_time = time.time()
-horizontal()
-vertical()
-diagonal()
+numbers()
 print(time.time() - start_time)
