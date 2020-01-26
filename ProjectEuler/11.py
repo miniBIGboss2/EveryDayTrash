@@ -64,12 +64,7 @@ def numbers():
             temp_numb = temp_prod
         if y == 20:
             break
-    print(temp_numb)
 
-
-def numbers_2():
-    temp_numb = 0
-    temp_prod = 0
     y = 0
     x = 0
     while True:
@@ -83,12 +78,7 @@ def numbers_2():
             temp_numb = temp_prod
         if x == 20:
             break
-    print(temp_numb)
 
-
-def numbers_3():
-    temp_numb = 0
-    temp_prod = 0
     y = 0
     x = 0
     while True:
@@ -102,12 +92,7 @@ def numbers_3():
             temp_numb = temp_prod
         if y == 20:
             break
-    print(temp_numb)
 
-
-def numbers_4():
-    temp_numb = 0
-    temp_prod = 0
     y = 0
     x = 0
     while True:
@@ -121,12 +106,10 @@ def numbers_4():
             temp_numb = temp_prod
         if y == 20:
             break
+
     print(temp_numb)
 
 
 start_time = time.time()
 numbers()
-numbers_2()
-numbers_3()
-numbers_4()
 print(time.time() - start_time)
