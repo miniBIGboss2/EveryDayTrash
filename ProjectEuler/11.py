@@ -51,12 +51,20 @@ grid = [[8, 2, 22, 97, 38, 15, 00, 40, 00, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 
 def numbers():
     temp_numb = 0
     y = 0
-    for x in range(len(grid[0])):
-        temp_prod = grid[[0][0]] * grid[[0][1]] * grid[[0][2]] * grid[[0][3]]
-        grid[[0][0]]
+    x = 0
+    while True:
+        try:
+            temp_prod = grid[y][x] * grid[y][x + 1] * grid[y][x + 2] * grid[y][x + 3]
+            x += 1
+        except IndexError:
+            y += 1
+            x = 0
         if temp_prod > temp_numb:
             temp_numb = temp_prod
-        print(grid[y][x], end=' ')
+            print(temp_numb)
+        """print(grid[y][x], end=' ')"""
+        if y == 20:
+            break
     print()
     print(temp_numb)
 
