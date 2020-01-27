@@ -15,7 +15,21 @@ import time
 
 
 def my_func():
-    pass
+    tri_numb = 1
+    term = 2
+    factors = 0
+    while True:
+        print(tri_numb)
+        tri_numb += term
+        term += 1
+        for i in range(1, tri_numb):
+            if tri_numb % i == 0:
+                factors += 1
+        if factors == 500:
+            print(tri_numb)
+            break
+        else:
+            factors = 0
 
 
 start_time = time.time()
