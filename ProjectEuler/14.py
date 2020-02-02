@@ -14,7 +14,22 @@ import time
 
 
 def my_func():
-    pass
+    start_numb = 13
+    temp_start_numb = start_numb
+    my_list = [start_numb]
+    while True:
+        if temp_start_numb % 2 == 0:
+            temp_numb = temp_start_numb / 2
+            my_list.append(temp_numb)
+            temp_start_numb = temp_numb
+            if temp_numb == 1:
+                print(my_list)
+                print(start_numb)
+                return False
+        else:
+            temp_numb = 3 * temp_start_numb + 1
+            my_list.append(temp_numb)
+            temp_start_numb = temp_numb
 
 
 start_time = time.time()
