@@ -15,14 +15,12 @@ def shit():
         for i in range(1, 21):
             if numb % i == 0:
                 check += 1
-                print(numb)
                 if check == 20:
                     just_list.append(numb)
                     return False
             else:
                 numb += 1
                 check = 0
-                print(numb)
 
 
 start_time = time.time()
