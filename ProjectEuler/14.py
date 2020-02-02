@@ -34,26 +34,29 @@ def my_func():
 
 
 def test_my_func():
-    start_numb = 13
-    temp_start_numb = start_numb
-    my_list = [start_numb]
-    while True:
-        if temp_start_numb % 2 == 0:
-            temp_numb = int(temp_start_numb / 2)
-            my_list.append(temp_numb)
-            temp_start_numb = temp_numb
-            if temp_numb == 1:
-                print(my_list)
-                print(len(my_list))
-                print(start_numb)
-                return False
-        else:
-            temp_numb = 3 * temp_start_numb + 1
-            my_list.append(temp_numb)
-            temp_start_numb = temp_numb
+    big_numb = 13
+    my_list = []
+    temp_list = []
+    while big_numb < 1000000:
+        big_numb += 1
+        while True:
+            if big_numb % 2 == 0:
+                temp_numb = big_numb / 2
+                temp_list.append(temp_numb)
+                if temp_numb == 1:
+                    if len(temp_list) > len(my_list):
+                        my_list = temp_list
+                        temp_list.clear()
+                        big_numb = temp_numb
+                    return False
+            else:
+                temp_numb = 3 * big_numb + 1
+                temp_list.append(temp_numb)
+    print(big_numb)
+    print(my_list)
 
 
 start_time = time.time()
-my_func()
+"""my_func()"""
 test_my_func()
 print(time.time() - start_time)
