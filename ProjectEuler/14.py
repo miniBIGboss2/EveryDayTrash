@@ -19,11 +19,32 @@ def my_func():
     my_list = [start_numb]
     while True:
         if temp_start_numb % 2 == 0:
-            temp_numb = temp_start_numb / 2
+            temp_numb = int(temp_start_numb / 2)
             my_list.append(temp_numb)
             temp_start_numb = temp_numb
             if temp_numb == 1:
                 print(my_list)
+                print(len(my_list))
+                print(start_numb)
+                return False
+        else:
+            temp_numb = 3 * temp_start_numb + 1
+            my_list.append(temp_numb)
+            temp_start_numb = temp_numb
+
+
+def test_my_func():
+    start_numb = 13
+    temp_start_numb = start_numb
+    my_list = [start_numb]
+    while True:
+        if temp_start_numb % 2 == 0:
+            temp_numb = int(temp_start_numb / 2)
+            my_list.append(temp_numb)
+            temp_start_numb = temp_numb
+            if temp_numb == 1:
+                print(my_list)
+                print(len(my_list))
                 print(start_numb)
                 return False
         else:
@@ -34,4 +55,5 @@ def my_func():
 
 start_time = time.time()
 my_func()
+test_my_func()
 print(time.time() - start_time)
