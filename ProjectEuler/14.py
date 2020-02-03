@@ -6,57 +6,37 @@ Using the rule above and starting with 13, we generate the following sequence:
 It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms.
 Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1.
 Which starting number, under one million, produces the longest chain?
-NOTE: Once the chain starts the terms are allowed to go above one million.
-
-"""
+NOTE: Once the chain starts the terms are allowed to go above one million."""
 
 import time
 
 
 def my_func():
-    start_numb = 13
-    temp_start_numb = start_numb
-    my_list = [start_numb]
-    while True:
-        if temp_start_numb % 2 == 0:
-            temp_numb = int(temp_start_numb / 2)
-            my_list.append(temp_numb)
-            temp_start_numb = temp_numb
-            if temp_numb == 1:
-                print(my_list)
-                print(len(my_list))
-                print(start_numb)
-                return False
-        else:
-            temp_numb = 3 * temp_start_numb + 1
-            my_list.append(temp_numb)
-            temp_start_numb = temp_numb
-
-
-def test_my_func():
-    big_numb = 13
-    my_list = []
-    temp_list = []
-    while big_numb < 1000000:
-        big_numb += 1
+    count = 13
+    chain_len = 0
+    temp_chain_len = 0
+    while count < 1000000:
+        temp_numb = count
         while True:
-            if big_numb % 2 == 0:
-                temp_numb = big_numb / 2
-                temp_list.append(temp_numb)
+            if temp_numb % 2 == 0:
+                temp_numb = temp_numb / 2
+                temp_chain_len += 1
                 if temp_numb == 1:
-                    if len(temp_list) > len(my_list):
-                        my_list = temp_list
-                        temp_list.clear()
-                        big_numb = temp_numb
-                    return False
+                    if temp_chain_len >= chain_len:
+                        chain_len = temp_chain_len
+                        temp_chain_len = 0
+                        print(count)
+                        count += 1
+                        break
+                    else:
+                        temp_chain_len = 0
+                        count += 1
+                        break
             else:
-                temp_numb = 3 * big_numb + 1
-                temp_list.append(temp_numb)
-    print(big_numb)
-    print(my_list)
+                temp_numb = 3 * temp_numb + 1
+                temp_chain_len += 1
 
 
 start_time = time.time()
-"""my_func()"""
-test_my_func()
+my_func()
 print(time.time() - start_time)
