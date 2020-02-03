@@ -12,6 +12,7 @@ import time
 
 
 def my_func():
+    big_num = 0
     count = 13
     chain_len = 0
     temp_chain_len = 0
@@ -25,7 +26,7 @@ def my_func():
                     if temp_chain_len >= chain_len:
                         chain_len = temp_chain_len
                         temp_chain_len = 0
-                        print(count)
+                        big_num = count
                         count += 1
                         break
                     else:
@@ -35,6 +36,7 @@ def my_func():
             else:
                 temp_numb = 3 * temp_numb + 1
                 temp_chain_len += 1
+    print(big_num)
 
 
 start_time = time.time()
